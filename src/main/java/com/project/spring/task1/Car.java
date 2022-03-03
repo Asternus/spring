@@ -1,4 +1,4 @@
-package com.project.spring;
+package com.project.spring.task1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
