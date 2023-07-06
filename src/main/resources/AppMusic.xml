@@ -8,7 +8,7 @@
         http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean id="MusicBean"
-          class="com.project.spring.task3.ClassicalMusic">
+          class="com.project.spring.task3.RockMusic">
     </bean>
 
 </beans>
