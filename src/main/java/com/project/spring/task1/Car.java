@@ -6,8 +6,17 @@ import org.springframework.stereotype.Component;
 @Component
 public class Car {
 
-    @Autowired
     private CarEngine carEngine;
+
+    @Autowired
+    public Car(CarEngine carEngine) {
+        this.carEngine = carEngine;
+    }
+
+
+    public void setCarEngine(CarEngine carEngine) {
+        this.carEngine = carEngine;
+    }
 
     public void getCarEngine() {
         System.out.println(carEngine.getEngine());
