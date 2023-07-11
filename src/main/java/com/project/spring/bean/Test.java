@@ -9,6 +9,7 @@ public class Test {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(Config.class);
         Animal animal = ctx.getBean(Animal.class);
         System.out.println(animal);
+
     }
 
 }

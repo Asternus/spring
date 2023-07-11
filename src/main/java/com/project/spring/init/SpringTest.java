@@ -9,6 +9,7 @@ public class SpringTest {
         ApplicationContext ctx = new AnnotationConfigApplicationContext(Config.class);
         Cat cat = ctx.getBean(Cat.class);
         System.out.println(cat);
+
     }
 
 }
