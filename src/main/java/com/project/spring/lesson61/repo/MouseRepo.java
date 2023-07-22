@@ -14,12 +14,8 @@ public interface MouseRepo extends JpaRepository<Mouse, Long> {
 
     List<Mouse> findAllByAge(Integer age);
 
-    @Transactional
     @Modifying
-    int updateMouseById(Long id);
-
     @Transactional
-    @Modifying
-    boolean deleteMouseById(Long id);
-
+    @Query("UPDATE Mouse m SET m.name = :#{#updatedMouse.name}, m.value = :#{#updatedMouse.value}, m.age = :#{#updatedMouse.age}, m.mouseType = :#{#updatedMouse.mouseType} WHERE m.id = :#{#updatedMouse.id}")
+    void updateMouse(Mouse updatedMouse);
 }
